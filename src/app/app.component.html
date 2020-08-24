@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6 mt-5 pt-5 pb-5 mb-5 selection-div">
+
+            <h3>Location Selector App </h3>
+
+            <!-- Country multi-select dropdown starts -->
+            <div class="states-container mt-4">
+                <span class="heading-text">
+                    <strong>Select Countries</strong>
+                </span>
+                <ejs-multiselect 
+                    id='CountryData' #local 
+                    [dataSource]='data' 
+                    [fields]='localFields' 
+                    [placeholder]='CountryPlaceHolder' 
+                    (change)='onCountrySelected()' 
+                    [(value)]='countrySelected'>
+                </ejs-multiselect>
+            </div>
+            <!-- Country multi-select dropdown ends -->
+
+            <!-- State multi-select dropdown starts -->
+            <div class="states-container mt-4">
+                <span class="heading-text">
+                    <strong>States:</strong>
+                </span> 
+                <ejs-multiselect 
+                    id='StateData' #local 
+                    [dataSource]='states' 
+                    [fields]='localFields' 
+                    [placeholder]='StatePlaceHolder' 
+                    [(value)]='stateSelected' 
+                    (change)='onStateSelected()'>
+                </ejs-multiselect>
+            </div>
+            <!-- State multi-select dropdown starts -->
+
+            <!-- City multi-select dropdown starts -->
+            <div class="states-container mt-4">
+                <span class="heading-text">
+                    <strong>Select Cities</strong>
+                </span>
+                <ejs-multiselect id='CityData' #local 
+                    [dataSource]='cities' 
+                    [fields]='localFields' 
+                    [placeholder]='CityPlaceHolder' 
+                    [(value)]='citySelected' 
+                    (change)='onCitySelected()'>
+                </ejs-multiselect>
+            </div>
+            <!-- City multi-select dropdown starts -->
+
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
